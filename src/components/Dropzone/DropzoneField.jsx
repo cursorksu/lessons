@@ -26,7 +26,7 @@ export const DropzoneField = ({ onChange }) => {
         value: image,
         description,
       });
-  }, [image, description]);
+  }, [image, description, onChange]);
 
   return (
     <>

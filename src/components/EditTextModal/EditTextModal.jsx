@@ -55,7 +55,7 @@ export const EditTextModal = () => {
     } catch (e) {
       console.log(e);
     }
-  }, [topic]);
+  }, [topic, createTopic, updateLesson, handleClose, id]);
 
   const addEntity = useCallback(
     (entityName) => {
@@ -68,7 +68,7 @@ export const EditTextModal = () => {
         },
       ]);
     },
-    [setTopic, getRandomNumber],
+    [setTopic],
   );
 
   const handleChangeField = (target, type) => {

@@ -49,7 +49,7 @@ export const EditModal = ({ fieldName, fieldData }) => {
   const handleClose = useCallback(() => {
     setIsOpen(false);
     reset();
-  }, []);
+  }, [setIsOpen, reset]);
 
   const onSubmitHandler = useCallback(
     async (data) => {
@@ -62,7 +62,7 @@ export const EditModal = ({ fieldName, fieldData }) => {
         console.log(e);
       }
     },
-    [fieldName, setIsOpen],
+    [setIsOpen, id, getLessonById, updateLesson, reset],
   );
 
   return (

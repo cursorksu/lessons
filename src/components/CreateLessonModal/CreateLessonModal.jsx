@@ -40,7 +40,7 @@ export const CreateLessonModal = ({ onSubmit }) => {
   const handleClose = useCallback(() => {
     setIsOpen(false);
     reset();
-  }, []);
+  }, [reset]);
 
   const onSubmitHandler = useCallback(
     async (data) => {
@@ -52,7 +52,7 @@ export const CreateLessonModal = ({ onSubmit }) => {
         console.log(e);
       }
     },
-    [onSubmit, setIsOpen],
+    [onSubmit, setIsOpen, reset],
   );
 
   return (
