@@ -1,1 +1,1 @@
-export * as Topic from "./Topic";
+export * as Topic from './Topic';

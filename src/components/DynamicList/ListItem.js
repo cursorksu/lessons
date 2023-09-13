@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
-import { ButtonIconBasisStyled } from "../ButtonStyled";
-import { InputContrastStyled } from "../InputStyled";
-import { ReactComponent as MoveIcon } from "../../assets/move.svg";
-import { ReactComponent as RemoveIcon } from "../../assets/minus.svg";
-import { useDrag, useDrop } from "react-dnd";
-import { DndItemStyled } from "./style";
+import React, { useRef } from 'react';
+import { ButtonIconBasisStyled } from '../ButtonStyled';
+import { InputContrastStyled } from '../InputStyled';
+import { ReactComponent as MoveIcon } from '../../assets/move.svg';
+import { ReactComponent as RemoveIcon } from '../../assets/minus.svg';
+import { useDrag, useDrop } from 'react-dnd';
+import { DndItemStyled } from './style';
 
 export const ListItem = ({
   field,
@@ -18,7 +18,7 @@ export const ListItem = ({
   // https://codesandbox.io/s/github/react-dnd/react-dnd/tree/gh-pages/examples_js/04-sortable/simple?from-embed=&file=/src/Container.js:20-39
 
   const [{ handlerId }, drop] = useDrop({
-    accept: "input",
+    accept: 'input',
     collect(monitor) {
       return {
         handlerId: monitor.getHandlerId(),
@@ -49,7 +49,7 @@ export const ListItem = ({
     },
   });
   const [{ opacity }, drag, preview] = useDrag({
-    type: "input",
+    type: 'input',
     item: () => {
       return { id: field?.id, index };
     },

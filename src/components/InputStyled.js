@@ -1,6 +1,6 @@
-import { TextareaAutosize, TextField } from "@mui/material";
-import styled from "@emotion/styled";
-import { BORDER_GRAY, PRIMARY_MAIN_RGBA } from "../constants/colors";
+import { TextareaAutosize, TextField } from '@mui/material';
+import styled from '@emotion/styled';
+import { BORDER_GRAY, PRIMARY_MAIN_RGBA } from '../constants/colors';
 
 export const InputFieldStyled = styled.div`
   width: 100%;

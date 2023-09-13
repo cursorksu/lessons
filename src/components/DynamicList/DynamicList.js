@@ -1,13 +1,13 @@
-import React, { useState, useCallback, useEffect, useMemo } from "react";
-import { FormGroup } from "@mui/material";
-import { ButtonIconBasisStyled } from "../ButtonStyled";
-import { ReactComponent as AddIcon } from "../../assets/add.svg";
-import { ReactComponent as DeleteIcon } from "../../assets/delete.svg";
-import { ListItem } from "./ListItem";
-import { getRandomNumber } from "../../utils/randomizer";
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import { FormGroup } from '@mui/material';
+import { ButtonIconBasisStyled } from '../ButtonStyled';
+import { ReactComponent as AddIcon } from '../../assets/add.svg';
+import { ReactComponent as DeleteIcon } from '../../assets/delete.svg';
+import { ListItem } from './ListItem';
+import { getRandomNumber } from '../../utils/randomizer';
 
 export const DynamicList = ({ field, initialField }) => {
-  const initialItem = useMemo(() => ({ id: 1, value: "" }), []);
+  const initialItem = useMemo(() => ({ id: 1, value: '' }), []);
   const [list, setList] = useState([initialField || initialItem]);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export const DynamicList = ({ field, initialField }) => {
     const min = 1;
     const max = 10000;
     const randomNum = getRandomNumber(min, max);
-    setList((prev) => [...prev, { id: randomNum, value: "" }]);
+    setList((prev) => [...prev, { id: randomNum, value: '' }]);
   };
 
   const handleRemove = (id) => {

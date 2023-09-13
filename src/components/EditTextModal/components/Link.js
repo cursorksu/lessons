@@ -1,10 +1,10 @@
-import { BlockWrapperFlexStyled } from "../style";
-import { InputFieldStyled, InputStyled } from "../../InputStyled";
-import React, { useState } from "react";
+import { BlockWrapperFlexStyled } from '../style';
+import { InputFieldStyled, InputStyled } from '../../InputStyled';
+import React, { useState } from 'react';
 
 export const Link = ({ onChange, name }) => {
-  const [link, setLink] = useState("");
-  const [text, setText] = useState("");
+  const [link, setLink] = useState('');
+  const [text, setText] = useState('');
 
   return (
     <BlockWrapperFlexStyled>

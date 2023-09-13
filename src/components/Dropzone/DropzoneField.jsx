@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import Dropzone from "react-dropzone";
-import { FormLabel } from "@mui/material";
-import { resizeFile } from "../../utils/resizeFile";
-import { InputFieldStyled, TextareaAutosizeStyled } from "../InputStyled";
+import React, { useEffect, useState } from 'react';
+import Dropzone from 'react-dropzone';
+import { FormLabel } from '@mui/material';
+import { resizeFile } from '../../utils/resizeFile';
+import { InputFieldStyled, TextareaAutosizeStyled } from '../InputStyled';
 
-import { UvDropzoneStyled, StyledDropzoneBody } from "./styles";
+import { UvDropzoneStyled, StyledDropzoneBody } from './styles';
 
 export const DropzoneField = ({ onChange }) => {
-  const [image, setImage] = useState("");
-  const [description, setDescription] = useState("");
+  const [image, setImage] = useState('');
+  const [description, setDescription] = useState('');
 
   const onDrop = async (acceptedFiles) => {
     acceptedFiles.forEach((file) => {

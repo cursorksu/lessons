@@ -1,8 +1,8 @@
-import React from "react";
-import { Card } from "../Card";
-import { EditTextModal } from "../EditTextModal";
-import { Box, Grid } from "@mui/material";
-import { EditModal } from "../EditModal";
+import React from 'react';
+import { Card } from '../Card';
+import { EditTextModal } from '../EditTextModal';
+import { Box, Grid } from '@mui/material';
+import { EditModal } from '../EditModal';
 // import { Topic } from "../Topic";
 
 export const TopicToPrint = React.forwardRef(({ lesson }, ref) => {
@@ -17,13 +17,13 @@ export const TopicToPrint = React.forwardRef(({ lesson }, ref) => {
       >
         <h1>{lesson?.title}</h1>
       </Grid>
-      <Grid item sm={4} sx={{ paddingRight: "12px" }}>
+      <Grid item sm={4} sx={{ paddingRight: '12px' }}>
         <Card
           title="Золотой стих"
           action={
             <Box className="action">
               {lesson?.quote}
-              <EditModal fieldName={"bible"} fieldData={lesson?.bible} />
+              <EditModal fieldName={'bible'} fieldData={lesson?.bible} />
             </Box>
           }
         >
@@ -33,7 +33,7 @@ export const TopicToPrint = React.forwardRef(({ lesson }, ref) => {
           title="Материалы к уроку"
           action={
             <Box className="action">
-              <EditModal fieldName={"quote"} fieldData={lesson?.quote} />
+              <EditModal fieldName={'quote'} fieldData={lesson?.quote} />
             </Box>
           }
         >
@@ -43,12 +43,12 @@ export const TopicToPrint = React.forwardRef(({ lesson }, ref) => {
           title="В этом уроке:"
           action={
             <Box className="action">
-              <EditModal fieldName={"list"} fieldData={lesson?.list} />
+              <EditModal fieldName={'list'} fieldData={lesson?.list} />
             </Box>
           }
         >
           {lesson?.list?.map((el, idx) => (
-            <Box sx={{ textAlign: "left" }} key={el?.id}>
+            <Box sx={{ textAlign: 'left' }} key={el?.id}>
               <b>{++idx}</b>. {el?.value}
             </Box>
           ))}
@@ -59,7 +59,7 @@ export const TopicToPrint = React.forwardRef(({ lesson }, ref) => {
           title="Цель урока"
           action={
             <Box className="action">
-              <EditModal fieldName={"goal"} fieldData={lesson?.goal} />
+              <EditModal fieldName={'goal'} fieldData={lesson?.goal} />
             </Box>
           }
         >
@@ -68,7 +68,7 @@ export const TopicToPrint = React.forwardRef(({ lesson }, ref) => {
         <Card
           title="История"
           action={
-            <EditTextModal fieldName={"topic"} fieldData={lesson?.topic} />
+            <EditTextModal fieldName={'topic'} fieldData={lesson?.topic} />
           }
         >
           {/*<Topic />*/}

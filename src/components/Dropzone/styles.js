@@ -1,14 +1,14 @@
-import { Box } from "@mui/material";
-import styled from "@emotion/styled";
+import { Box } from '@mui/material';
+import styled from '@emotion/styled';
 import {
   BG_GRAY,
   PRIMARY_MAIN,
   BG_SUCCESS,
   DARK_GRAY,
   SUCCESS,
-} from "../../constants/colors";
+} from '../../constants/colors';
 
-export const FileUploadedStyled = styled("div")`
+export const FileUploadedStyled = styled('div')`
   margin-top: 12px;
   padding: 6px 12px;
   border-radius: 4px;
@@ -20,7 +20,7 @@ export const FileUploadedStyled = styled("div")`
   align-items: center;
   text-align: center;
 `;
-export const StyledDropzoneBody = styled("div")`
+export const StyledDropzoneBody = styled('div')`
   overflow-y: auto;
 `;
 
@@ -32,7 +32,7 @@ export const CropperContainerStyled = styled(Box)`
   position: relative;
 `;
 
-export const MaskStyled = styled("div")`
+export const MaskStyled = styled('div')`
   width: 100%;
   height: calc(100vh - 40px);
   position: absolute;
@@ -63,7 +63,7 @@ export const MaskStyled = styled("div")`
   }
 `;
 
-export const BikiniPhotoStyled = styled("div")`
+export const BikiniPhotoStyled = styled('div')`
   position: fixed;
   width: 25%;
   height: calc(100vh - 40px);
@@ -108,7 +108,7 @@ export const ActionStyled = styled(Box)`
   }
 `;
 
-export const UvDropzoneStyled = styled("section")`
+export const UvDropzoneStyled = styled('section')`
   background: ${BG_GRAY};
   border: 1px dashed ${PRIMARY_MAIN};
   border-radius: 4px;

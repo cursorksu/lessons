@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { useGetTopicById } from "../../api/topic";
-import { TopicStyled } from "./style";
+import React, { useEffect, useState } from 'react';
+import { useGetTopicById } from '../../api/topic';
+import { TopicStyled } from './style';
 
 export const Topic = React.forwardRef(({ lesson }) => {
   const [currentTopic, setCurrentTopic] = useState(null);
@@ -18,7 +18,7 @@ export const Topic = React.forwardRef(({ lesson }) => {
   return (
     <TopicStyled>
       {currentTopic?.map((el) => {
-        if (el.type === "list") {
+        if (el.type === 'list') {
           return (
             <ul key={el.id}>
               {el.value.map((item) => (
@@ -28,11 +28,11 @@ export const Topic = React.forwardRef(({ lesson }) => {
           );
         }
 
-        if (el.type === "dev") {
+        if (el.type === 'dev') {
           return <hr key={el.id} />;
         }
 
-        if (el.type === "dict") {
+        if (el.type === 'dict') {
           return (
             <div>
               <div className="declaration">{el.value}</div>
@@ -41,22 +41,22 @@ export const Topic = React.forwardRef(({ lesson }) => {
           );
         }
 
-        if (el.type === "title") {
+        if (el.type === 'title') {
           return <h2 key={el.id}>{el.value}</h2>;
         }
-        if (el.type === "subtitle") {
+        if (el.type === 'subtitle') {
           return <h4 key={el.id}>{el.value}</h4>;
         }
 
-        if (el.type === "paragraph") {
+        if (el.type === 'paragraph') {
           return <p key={el.id}>{el.value}</p>;
         }
 
-        if (el.type === "date") {
+        if (el.type === 'date') {
           return <i key={el.id}>{el.value}</i>;
         }
 
-        if (el.type === "image") {
+        if (el.type === 'image') {
           return (
             <div key={el.id}>
               <div>
@@ -69,7 +69,7 @@ export const Topic = React.forwardRef(({ lesson }) => {
           );
         }
 
-        if (el.type === "link") {
+        if (el.type === 'link') {
           return (
             <a key={el.id} href={el.value}>
               {el.text}
@@ -77,7 +77,7 @@ export const Topic = React.forwardRef(({ lesson }) => {
           );
         }
 
-        if (el.type === "media") {
+        if (el.type === 'media') {
           return (
             <iframe
               title={el.id}
@@ -89,7 +89,7 @@ export const Topic = React.forwardRef(({ lesson }) => {
           );
         }
 
-        if (el.type === "code") {
+        if (el.type === 'code') {
           const htmlContent = el.value;
 
           return (
