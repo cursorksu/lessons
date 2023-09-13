@@ -1,6 +1,6 @@
-import { TextareaAutosize, TextField } from '@mui/material';
-import styled from '@emotion/styled';
-import { BORDER_GRAY, PRIMARY_MAIN_RGBA } from '../constants/colors';
+import { TextareaAutosize, TextField } from "@mui/material";
+import styled from "@emotion/styled";
+import { BORDER_GRAY, PRIMARY_MAIN_RGBA } from "../constants/colors";
 
 export const InputFieldStyled = styled.div`
   width: 100%;
@@ -31,7 +31,9 @@ export const InputStyled = styled(TextField)`
 
   .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
     border: 1px solid transparent;
-    transition: border-color, 0.3s ease-in-out;
+    transition:
+      border-color,
+      0.3s ease-in-out;
   }
 
   .MuiInputLabel-root {
@@ -116,7 +118,9 @@ export const InputContrastStyled = styled(TextField)`
 
 export const TextareaAutosizeStyled = styled(TextareaAutosize)`
   border: 1px solid ${BORDER_GRAY};
-  transition: border-color, 0.3s ease-in-out;
+  transition:
+    border-color,
+    0.3s ease-in-out;
   cursor: pointer;
   font-family: Montserrat, sans-serif;
   font-weight: 300;
