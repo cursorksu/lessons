@@ -1,9 +1,17 @@
 {
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
   "hosting": {
     "public": "build",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
-    "predeploy": [
-      "npm install --prefix \"$RESOURCE_DIR\""
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ],
     "rewrites": [
       {
@@ -11,5 +19,11 @@
         "destination": "/index.html"
       }
     ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "remoteconfig": {
+    "template": "remoteconfig.template.json"
   }
 }
